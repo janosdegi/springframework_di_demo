@@ -19,10 +19,13 @@ public class DiDemoApplication {
 		System.out.println("testController.hello(): ");
 		testController.hello();
 
+		System.out.println(" ");
+
 		TestController2Impl testController2 = (TestController2Impl)ctx.getBean("testController2Impl");
 		System.out.println("testController2.hello(): ");
 		testController2.hello();
 
+		System.out.println(" ");
 
 		//Spring Profile | resources/application.properties spring.profiles.active
 		ProfileTestImpl profileTestImpl = (ProfileTestImpl)ctx.getBean("profileTestImpl");
