@@ -1,6 +1,8 @@
 package guru.springframework.controllers;
 
 
+import guru.springframework.repositories.GreetingRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Primary;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
@@ -13,9 +15,12 @@ import org.springframework.stereotype.Service;
 @Profile("de")
 public class PrimaryGermanGreetingsService implements GreetingsService {
 
+    @Autowired
+    GreetingRepository greetingRepository;
+
     @Override
     public String sayGreeting() {
-        return "Primärer Grußdienst";
+        return greetingRepository.getGermanGreeting();
     }
 
 }

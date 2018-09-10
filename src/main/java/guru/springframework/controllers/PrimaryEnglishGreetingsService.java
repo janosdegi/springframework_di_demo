@@ -1,5 +1,7 @@
 package guru.springframework.controllers;
 
+import guru.springframework.repositories.GreetingRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Primary;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
@@ -12,8 +14,11 @@ import org.springframework.stereotype.Service;
 @Profile({"en", "default"})
 public class PrimaryEnglishGreetingsService implements GreetingsService {
 
+    @Autowired
+    GreetingRepository greetingRepository;
+
     public String sayGreeting() {
-        return "Primary Greetings service";
+        return greetingRepository.getEnglishGreeting();
     }
 
 }
