@@ -14,8 +14,12 @@ import org.springframework.stereotype.Service;
 @Profile({"en", "default"})
 public class PrimaryEnglishGreetingsService implements GreetingsService {
 
-    @Autowired
+//    @Autowired
     GreetingRepository greetingRepository;
+
+    public PrimaryEnglishGreetingsService(GreetingRepository greetingRepository) {
+        this.greetingRepository = greetingRepository;
+    }
 
     public String sayGreeting() {
         return greetingRepository.getEnglishGreeting();
