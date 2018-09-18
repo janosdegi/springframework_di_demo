@@ -9,9 +9,9 @@ import org.springframework.stereotype.Service;
 /**
  * Created by Dégi János on 2018.09.04..
  */
-@Service
-@Primary
-@Profile({"en", "default"})
+//@Service
+//@Primary
+//@Profile({"en", "default"})
 public class PrimaryEnglishGreetingsService implements GreetingsService {
 
 //    @Autowired
