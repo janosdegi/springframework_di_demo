@@ -1,8 +1,8 @@
 package guru.springframework;
 
-import guru.springframework.controllers.*;
 import guru.springframework.examplebeans.FakeDataSource;
 import guru.springframework.examplebeans.FakeDataSource2;
+import guru.springframework.examplebeans.SpringBootApplicationPropertyDataSource;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -32,12 +32,23 @@ public class DiDemoApplication {
 //		System.out.println(profileTestImpl.sayGreeting());
 //		System.out.println("-----------------------------------------------------------------");
 
-		//External Properties - Property Source
+		//External Properties - Property Source -------------------------------------------------------//
 		FakeDataSource fakeDataSource = (FakeDataSource)ctx.getBean(FakeDataSource.class);
 		FakeDataSource2 fakeDataSource2 = (FakeDataSource2)ctx.getBean(FakeDataSource2.class);
+		System.out.println();
 		System.out.println("---External Properties-----------------------");
 		System.out.println(fakeDataSource.toString());
 		System.out.println(fakeDataSource2.toString());
 		System.out.println("---------------------------------------------");
+
+		System.out.println();
+
+		//External Properties - Spring Boot Application Properties -----------------------------------//
+		SpringBootApplicationPropertyDataSource springBootApplicationPropertyDataSource =
+				(SpringBootApplicationPropertyDataSource)ctx.getBean(SpringBootApplicationPropertyDataSource.class);
+		System.out.println("---Spring Boot Application Properties--------");
+		System.out.println(springBootApplicationPropertyDataSource.toString());
+		System.out.println("---------------------------------------------");
+		System.out.println();
 	}
 }
