@@ -1,0 +1,7 @@
+guru2:
+  jms:
+    username: Tim
+    password: 6789
+    dburl: jhgztutzut
+
+# two spaces are IMPORTANT!

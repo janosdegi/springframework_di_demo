@@ -32,13 +32,13 @@ public class PropertyConfig {
     @Value("${guru.dburl}")
     String url;
 
-    @Value("${guru2.username}")
+    @Value("${guru2.jms.username}")
     String user2;
 
-    @Value("${guru2.password}")
+    @Value("${guru2.jms.password}")
     String password2;
 
-    @Value("${guru2.dburl}")
+    @Value("${guru2.jms.dburl}")
     String url2;
 
     @Bean
