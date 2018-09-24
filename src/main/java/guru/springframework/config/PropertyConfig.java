@@ -26,8 +26,8 @@ public class PropertyConfig {
     @Value("${guru.username}")
     String user;
 
-    @Value("${guru.password}")
-    String password;
+    @Value("${guru.password}")  //based on the active profile (ex. spring.profiles.active=de)
+    String password;           //the value is going to be loaded from application-de.properties (if exists!!!)
 
     @Value("${guru.dburl}")
     String url;

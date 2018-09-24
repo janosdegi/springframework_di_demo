@@ -5,3 +5,12 @@ guru2:
     dburl: jhgztutzut
 
 # two spaces are IMPORTANT!
+
+
+
+--- # file separator
+spring:
+    profiles: de # in case of this profile the value of guru2.jms.username comes from here
+guru2:
+   jms:
+     username: David
