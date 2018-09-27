@@ -21,7 +21,7 @@ public class SpringBootApplicationPropertyDataSourceTest {
     public void getApplicationName() throws Exception {
         String appName = "di-demo";
 
-        springBootAppPropDataSource.setApplicationName("sss");
+        springBootAppPropDataSource.setApplicationName("di-demo");
 
         assertEquals("test msg", appName, springBootAppPropDataSource.getApplicationName() );
     }
